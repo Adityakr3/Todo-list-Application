@@ -1,0 +1,27 @@
+<%- include("particals/header") %>
+<%- include("particals/nav") %>
+    <h1>Welcome to Update Todo list</h1>
+    <div class="form">
+        <form action="/update/<%=post._id%>" method="post" >
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input value="<%=post.name%>" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInput" class="form-label">Due_date</label>
+                <input value="<%=post.due_date%>" type="text" class="form-control" id="exampleInput" name="due_date"> 
+              </div>
+              <div class="mb-3">
+                <label for="exampleInput" class="form-label">Status</label>
+                <input value="<%=post.status%>" type="text" class="form-control" id="exampleInput" name="status"> 
+              </div>
+            <div class="mb-3">
+              <label for="exampleInput" class="form-label">description</label>
+              <textarea value="<%=post.description%>"  type="text" class="form-control" id="exampleInput" name="description"> </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+  </body>
+</html>
+<%- include("particals/footer") %>

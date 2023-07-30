@@ -28,8 +28,8 @@
                         <td><%=post.name%></td>
                         <td><%=post.description%></td>
                         <td><%=post.due_date%></td>
-                        <td><select class="border-0" name="" id=""> <option value="">complete</option><option value="">pending</option></select>          </td>
-                        <td><a class="btn btn-primary" href="/update">Update</a></td>
+                        <td><%=post.status%></td>
+                        <td><a class="btn btn-primary" href="/update/<%=post._id%>">Update</a></td>
                         <td><a class="btn btn-danger" href="/delete/<%=post._id%>">Delete</a></td>
                       </tr>
               <%})%>

@@ -1,0 +1,47 @@
+<%- include("particals/header") %>
+<%- include("particals/nav") %>
+<div class="bb">
+    <h1 class="bb">Welcome in Todo Application</h1>
+<a class="btn btn-primary" href="/createtask">create Task</a>
+</div>
+<div class="todo">
+  <table style="position: relative;" class="table">
+    <thead>
+      <tr>
+        <th scope="col">
+          <table class="table">
+            <thead class="thead">
+              <tr >
+                <th scope="col">task_id</th>
+                <th scope="col">Name</th>
+                <th scope="col">description</th>
+                <th scope="col">due_date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% posts.forEach(function(post,idx){ %>
+                    <tr>
+                        <th scope="row"><%=idx+1%></th>
+                        <td><%=post.name%></td>
+                        <td><%=post.description%></td>
+                        <td><%=post.due_date%></td>
+                        <td><select class="border-0" name="" id=""> <option value="">complete</option><option value="">pending</option></select>          </td>
+                        <td><a class="btn btn-primary" href="/update">Update</a></td>
+                        <td><a class="btn btn-danger" href="/delete/<%=post._id%>">Delete</a></td>
+                      </tr>
+              <%})%>
+            </tbody>
+            <thead>
+          </table>
+        </th>
+       </tr>
+    </thead>
+</table>
+</div>
+</body>
+
+</html>
+<%- include("particals/footer") %>

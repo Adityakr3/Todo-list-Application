@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const UserModel = require("../model/userModel");
-const Data = require("../model/data");
+const Data = require("../model/tododata");
 
 router.get("/", function (req, res, next) {
   res.render("index", { title: "  TODO APPLICATION" });
